@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('icons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block; }
+
+[class ^= "icon-" ] {
+  font-family : 'icomoon' !important;
+  speak : never;
+  font-style : normal;
+  font-weight : normal;
+  font-variant : normal;
+  text-transform : none;
+  line-height : 1;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing : grayscale; }
+
+.icon-plus-alt:before {
+  content : "\e900"; }
+
+.icon-trash-stroke:before {
+  content : "\e901"; }
+
+.icon-pause:before {
+  content : "\e902"; }
+
+.icon-play-alt:before {
+  content : "\e903"; }
+
+.icon-reload:before {
+  content : "\e904"; }
+  
+.icon-pause2:before {
+  content : "\ea1d"; }    
+
+
+html {
+    box-sizing : border-box;
+    font-size : 16px; }
+
+* , *::after , *::before {
+    box-sizing : inherit; }
+
+* {
+    border : 0px;
+    margin : 0px;
+    padding : 0px;
+    font-size : inherit;
+    line-height : 1.18; 
+    outline-style : none; 
+    vertical-align : baseline; 
+    border-radius : 0px;
+    font-family : sans-serif; }
+
+html , body{
+    height : 100vh;
+    -webkit-user-select : none; /* Safari */        
+    -moz-user-select : none; /* Firefox */
+    -ms-user-select : none; /* IE10+/Edge */
+    user-select : none; /* Standard */ }
+
+body{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    padding : env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }    
+
+.timersApp {
+    --h-text-size : 1.3rem;
+    --p-text-size : 1.3rem;
+    --max-width : 45rem; /*375px@16px*/
+    --the-navigation-height: 2.5rem; /*40px@16px*/ }
+
+.timersApp{
+    display : flex;
+    flex-direction : column;
+    position : relative;
+
+    height : 100%;
+    width : 100%;
+    max-width : var(--max-width);
+    
+    background-color : black }
+
+.timersApp .theTimers {
+    --timer-time-width : 9rem;
+    --timer-input : 1.75rem; }
+
+.timersApp .theTimers {
+    height : calc (100% - var(--the-navigation-height ) );
+    overflow-y : scroll; }
+
+
+.timersApp  .theNavigation{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+
+    position : absolute;
+    bottom : 0px;
+    width : 100%;;
+
+    height : var(--the-navigation-height);
+
+    border-top : 1px solid;
+    background-color :white; }
+
+
+.timersApp .theTimers .timer{
+    display : flex; 
+    background-color : white;
+    margin-top : 1rem;; }
+
+.timersApp .theTimers .timer .timer-nav{
+    flex-grow: 1; }
+
+.timersApp .theTimers .timer .timer-nav .input_timerName_display {
+    position: absolute;
+    width : 100%;
+    height: var(--timer-input); 
+    padding-left : 0.25rem; }
+
+.timersApp .theTimers .timer .timer-nav .input_timerName_displayNone {
+    display : none ; }
+
+.timersApp .theTimers .timer .timer-nav .timer-name{
+    font-size : var(--h-text-size);
+    font-family : monospace;
+    text-align : center;
+    padding : 0.25rem 0px; }
+
+.timersApp .theTimers .timer .timer-nav .timer-buttons{
+    display : flex;
+    justify-content : space-around ;
+    font-size : var(--p-text-size);
+    padding-bottom : 0.5rem; }
+
+
+.timersApp .theTimers .timer .timer-time{
+    width : var(--timer-time-width);
+    display : flex;
+    justify-content : center ;
+    align-items : center ;
+    font-size : var(--p-text-size); }
+
+.timersApp  .theNavigation #nav-add{
+    width : 100%;
+    text-align: center ;
+    font-size : var(--h-text-size);
+    cursor: pointer; }
+
+.timersApp  .nav-add-touched::after{
+    padding-left: 0.5rem;
+    content : "\e900";
+    font-family: 'icomoon'; }
